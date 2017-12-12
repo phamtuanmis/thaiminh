@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>Smart Chatbot</title>
+</head>
+<link rel="stylesheet" href="css/animate.css" />
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" />
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+<link rel="shortcut icon" type="image/png" href="images/favicon.png" />
+
+<style>
+    body {
+        background-size: 1200px;
+        background-color: #3a96dd;
+        background-repeat: no-repeat;
+        background-attachment: fixed;
+        background-position: center;
+    }
+    .modal.in .lab-modal-body {
+        position:absolute;
+        bottom:5px;
+        right:50px;
+        margin:0px;
+        height:10
+    }
+    .lab-modal-body {
+        -webkit-transition: opacity 0.3s ease-out, bottom 0.3s ease-out;
+        -moz-transition: opacity 0.3s ease-out, bottom 0.3s ease-out;
+        -o-transition: opacity 0.3s ease-out, bottom 0.3s ease-out;
+        transition: opacity 0.3s ease-out, bottom 0.3s ease-out;
+    }
+
+    #chaticon {
+        -webkit-filter: drop-shadow(10px 10px 10px #111);
+        filter: drop-shadow(5px 5px 5px #222);
+        animation: bounce 1s infinite alternate;
+        -webkit-animation: bounce 1s infinite alternate;
+    }
+
+    @keyframes bounce {
+        from {
+            transform: translateY(0px);
+        }
+        to {
+            transform: translateY(-15px);
+        }
+    }
+    @-webkit-keyframes bounce {
+        from {
+            transform: translateY(0px);
+        }
+        to {
+            transform: translateY(-30px);
+        }
+    }
+</style>
+<body style="background-color:powderblue;">
+
+
+
+<!--<h1>Smart Chatbot </h1>-->
+<!--<h3>Hiện tại, Huyền My có thể trả lời về: </h3>-->
+<!--<div><img src='images/favicon.png' width='20px' height='20px' class='circular&#45;&#45;square' style='float: left;' />- Giới thiệu về NEU</b></div>-->
+<!--<div><img src='images/favicon.png' width='20px' height='20px' class='circular&#45;&#45;square' style='float: left;' />- Tải mẫu đơn xác nhận là SV</b></div>-->
+<!--<div><img src='images/favicon.png' width='20px' height='20px' class='circular&#45;&#45;square' style='float: left;' />- Điều kiện dự thi học phần</b></div>-->
+<!--<div><img src='images/favicon.png' width='20px' height='20px' class='circular&#45;&#45;square' style='float: left;' />- Các thông báo mới nhất của phòng đào tạo</b></div>-->
+<!--<div><img src='images/favicon.png' width='20px' height='20px' class='circular&#45;&#45;square' style='float: left;' />- Thời tiết Hà Nội, Sài Gòn</b></div>-->
+<!--<div><img src='images/favicon.png' width='20px' height='20px' class='circular&#45;&#45;square' style='float: left;' />- Tìm kiếm tài nguyên tại trang NEU.EDU.VN</b></div>-->
+<!--<div><img src='images/favicon.png' width='20px' height='20px' class='circular&#45;&#45;square' style='float: left;' />- Test google form</b></div>-->
+<!--<div><img src='images/favicon.png' width='20px' height='20px' class='circular&#45;&#45;square' style='float: left;' />- chào hỏi, tạm biệt, cám ơn, khen, chê, xin lỗi, nhận ra tên người dùng.</b></div>-->
+<!--<div><img src='images/favicon.png' width='20px' height='20px' class='circular&#45;&#45;square' style='float: left;' />- Hồ Chí Minh là ai</b></div>-->
+<!--<div><img src='images/favicon.png' width='20px' height='20px' class='circular&#45;&#45;square' style='float: left;' />- Buộc thôi </b></div>-->
+<!--<div><img src='images/favicon.png' width='20px' height='20px' class='circular&#45;&#45;square' style='float: left;' />- Hạng tốt nghiệp</b></div>-->
+<!--<div><img src='images/favicon.png' width='20px' height='20px' class='circular&#45;&#45;square' style='float: left;' />- Chuẩn đầu ra ngoại ngữ</b></div>-->
+<!--<div><img src='images/favicon.png' width='20px' height='20px' class='circular&#45;&#45;square' style='float: left;' />- Chuẩn đầu ra tin học</b></div>-->
+<!--<div><img src='images/favicon.png' width='20px' height='20px' class='circular&#45;&#45;square' style='float: left;' />- Chuyển trường</b></div>-->
+<!--<div><img src='images/favicon.png' width='20px' height='20px' class='circular&#45;&#45;square' style='float: left;' />- Điều kiện xét tốt nghiệp</b></div>-->
+<!--<div><img src='images/favicon.png' width='20px' height='20px' class='circular&#45;&#45;square' style='float: left;' />- Điểm chuyên cần</b></div>-->
+<!--<div><img src='images/favicon.png' width='20px' height='20px' class='circular&#45;&#45;square' style='float: left;' />- Hát một bài</b></div>-->
+<!--<div><img src='images/favicon.png' width='20px' height='20px' class='circular&#45;&#45;square' style='float: left;' />- ...</b></div>-->
+
+
+
+
+
+
+<div class="container">
+    <div id="chaticon" style="border:0px; position:fixed; bottom:10px; right:25px;">
+        <!--button type="button" class="btn btn-info btn-lg" data-toggle="modal" data-placement="top" data-target="#myModal">Hỏi Chatbot</button-->
+<input type="image" src="images/chat-icon.png" width="60px" height="60px" data-toggle="modal" data-placement="top" data-target="#myModal" style="outline:none;"/>
+    </div>
+    <div class="modal fade" id="myModal" role="dialog">
+        <div class="lab-modal-body modal-sm">
+            <!--div class="modal-content">
+                <div class="modal-header">
+                  <button type="button" class="close" data-dismiss="modal">&times;</button>
+                  <h4 class="modal-title">Modal Header</h4>
+                </div>
+
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+                </div>
+            </div-->
+            <iframe src='chat/apichat.html' height="470px" width="340px" style="border-radius: 7px;"></iframe>
+        </div>
+    </div>
+</div>
+</body>
+</html>

@@ -1,0 +1,254 @@
+@import url("animate.css");
+@import url("mdc.theme.css");
+@import url("angular-material.css");
+
+body {
+    font-family: 'Arial', Arial;
+    font-size: 14px;
+    background-color: #668cff;
+
+}
+.panel {
+
+    overflow: hidden;
+    position: absolute;
+    right: 0;
+    left: 0;
+    top: 0;
+    bottom:0;
+    margin: 3px;
+
+}
+
+div.calloutbig {
+    right: 0;
+    left: 0;
+    height: auto;
+    width: 99%;
+    margin: 0px;
+    position: relative;
+    display: inline-block;
+}
+
+.botclass {
+    bottom: 60px;
+    left: 0px;
+    top:1px;
+    transform: translateY(0);
+    overflow-x: hidden;
+    overflow-y: auto;
+    padding: 10px;
+    position: absolute;
+    right: 0;
+    top: 38px;
+    transition: transform 0.2s cubic-bezier(0, 0, 0.5, 1);
+    background-color: Beige;
+}
+
+.botclass::-webkit-scrollbar {
+    width: 4px;
+}
+
+.botclass::-webkit-scrollbar-track {
+    -webkit-box-shadow: inset 0 0 10px rgba(0,0,0,0.3);
+    border-radius: 10px;
+}
+
+.botclass::-webkit-scrollbar-thumb {
+    border-radius: 10px;
+    -webkit-box-shadow: inset 0 0 6px rgba(0,0,0,0.5);
+}
+
+.header {
+    background-color: #3a96dd;
+    box-shadow: 0 1px rgba(0, 0, 0, 0.2);
+    box-sizing: content-box;
+    color: #fff;
+    font-weight: 500;
+    height: 30px;
+    left: 0;
+    letter-spacing: 0.5px;
+    padding: 8px 8px 0 8px;
+    position: absolute;
+    right: 0;
+    top: 0;
+    z-index: 1;
+    display: block;
+    font-family: 'Arial', Arial;
+    font-size: 15px;
+}
+
+
+
+div.calloutleft {
+    position: relative;
+    color: #C48744;
+    padding: 8px;
+    border-radius: 7px;
+    box-shadow: 0px 0px 2px #999;
+    margin: 0px;
+    min-height: 15px;
+    border: none;
+    margin-right: 15px;
+    float: right;
+    background-color: #FFE7CB;
+    margin-top: 3px;
+}
+
+.calloutleft::before {
+    content: "";
+    width: 0px;
+    height: 0px;
+    border: 0.6em solid transparent;
+    position: absolute;
+    right: -20px;
+    top: 20%;
+    border-left: 20px solid #FFE7CB;
+
+}
+
+div.calloutright {
+    position: relative;
+    color: #45819B;
+    padding: 8px;
+    border-radius: 7px;
+    box-shadow: 0px 0px 2px #999;
+    margin: 0px;
+    min-height: 15px;
+    border: none;
+    margin-left: 15px;
+    float: left;
+    background-color: #C7EAFC ;
+    margin-top: 2px;
+}
+
+.calloutright::before {
+    content: "";
+    width: 0px;
+    height: 0px;
+    border: 0.6em solid transparent;
+    position: absolute;
+    left: -20px;
+    top: 20%;
+    border-right: 20px solid #C7EAFC ;
+}
+
+.scroll {
+    width: 200px;
+    height: 400px;
+    background: #ccccff;
+    overflow: scroll;
+}
+.scroll::-webkit-scrollbar {
+    width: 5px;
+}
+
+.scroll::-webkit-scrollbar-track {
+    -webkit-box-shadow: inset 0 0 6px rgba(0,0,0,0.3);
+    border-radius: 5px;
+}
+
+.scroll::-webkit-scrollbar-thumb {
+    border-radius: 5px;
+    -webkit-box-shadow: inset 0 0 6px rgba(0,0,0,0.5);
+}
+
+.message-from-me {
+    float: right;
+    margin-right: 60px;
+        margin-top: 1px;
+}
+
+.message-from-bot {
+    float: left;
+    margin-left: 60px;
+        margin-top: 1px;
+}
+
+.message-from {
+    clear: both;
+    color: #999;
+    font-size: 9px;
+    margin-top: 1px;
+}
+
+.image-cropper {
+    max-width: 50px;
+    height: auto;
+    position: relative;
+    overflow: hidden;
+}
+
+.image-cropper img{
+    display: block;
+    margin: 0 auto;
+    height: auto;
+    width: 150%;
+    margin: 0 0 0 -20%;
+    -webkit-border-radius: 50%;
+    -moz-border-radius: 50%;
+    -ms-border-radius: 50%;
+    -o-border-radius: 50%;
+    border-radius: 50%;
+}
+
+.circular--square {
+    border-radius: 50%;
+}
+
+
+
+
+
+.bottom_wrapper {
+  position: relative;
+  width: 99%;
+  background-color: #fff;
+  padding: 5px 3px;
+  position: absolute;
+  bottom: 0;
+}
+.bottom_wrapper .message_input_wrapper {
+  display: inline-block;
+  height: 45px;
+  border-radius: 12px;
+  border: 1px solid #bcbdc0;
+  width: calc(100% - 130px);
+  position: relative;
+  padding: 0 12px;
+}
+.bottom_wrapper .message_input_wrapper .message_input {
+  border: none;
+  height: 100%;
+  box-sizing: border-box;
+  width: calc(100% - 35px);
+  position: absolute;
+  outline-width: 0;
+  color: gray;
+}
+.bottom_wrapper .send_message {
+  width: 80px;
+  height: 45px;
+  display: inline-block;
+  border-radius: 12px;
+  background-color: #3a96dd;
+  border: 1px solid #a3d063;
+  color: #fff;
+  cursor: pointer;
+  transition: all 0.2s linear;
+  text-align: center;
+  float: right;
+  padding: 0px 0px;
+
+}
+.bottom_wrapper .send_message:hover {
+  color: #a3d063;
+  background-color: #fff;
+}
+.bottom_wrapper .send_message .text {
+  font-size: 16px;
+  font-weight: 900;
+  display: inline-block;
+  line-height: 48px;
+
+}
