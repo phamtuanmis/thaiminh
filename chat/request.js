@@ -34,15 +34,12 @@ function send(mytext) {
     var objDiv = document.getElementById("bot");
     objDiv.scrollTop = objDiv.scrollHeight;
     var accessToken = '05b1827af2404d9a80b21ba2f05120b8';
-    var baseUrl = "https://api.api.ai/v1/";
+    var baseUrl = "http://10.22.0.152:5000/conversation";
     var fun1 = $.ajax({
         type: "POST",
-        url: baseUrl + "query?v=20150910",
+        url: baseUrl,
         contentType: "application/json; charset=utf-8",
         dataType: "json",
-        headers: {
-            "Authorization": "Bearer " + accessToken
-        },
         data: JSON.stringify({ query: text, lang: "en", sessionId: "somerandomthing" }),
         success: function(data) {
             speech = $.parseJSON(JSON.stringify(data));
