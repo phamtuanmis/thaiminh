@@ -33,11 +33,13 @@ function send(mytext) {
     document.getElementById('bot').innerHTML = doc + "<div class='calloutbig'> <img src='user.png' width='32px' height='32px' class='circular--square' style='float: right;' /><div class='calloutleft'>" + text + "</div><div class='message-from message-from-me'>"+ new Date().toLocaleTimeString() +"</div></div>";
     var objDiv = document.getElementById("bot");
     objDiv.scrollTop = objDiv.scrollHeight;
-    var accessToken = '05b1827af2404d9a80b21ba2f05120b8';
-    var baseUrl = "http://10.22.0.152:5000/conversation";
+//    var accessToken = 'a22f09b1185540c28d42d379bdbbcc4d';
+    var baseUrl = "https://api.api.ai/v1/query?v=20150910";
+
     var fun1 = $.ajax({
         type: "POST",
         url: baseUrl,
+        headers: {"Authorization": "Bearer a22f09b1185540c28d42d379bdbbcc4d"},
         contentType: "application/json; charset=utf-8",
         dataType: "json",
         data: JSON.stringify({ query: text, lang: "en", sessionId: "somerandomthing" }),
